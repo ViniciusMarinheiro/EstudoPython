@@ -7,7 +7,7 @@ portas = [21, 22, 23, 25, 80, 135, 8080, 443, 3306, 445]
 def scan():
 
 # Incrimenta o final do IP de 0 a 255
-    final_ip = list(range(255))
+    final_ip = list(range(256))
     for final in final_ip:
         ip_certo = f'{ip}{final}'
         
