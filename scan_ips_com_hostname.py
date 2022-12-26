@@ -5,22 +5,6 @@ from timeit import default_timer as timer
 ip = '192.168.15.'
 portas = [21, 22, 23, 25, 80, 135, 8080, 443, 3306, 445]
 
-
-# #This is how I got the hostname from the ip
-# import socket
-
-# # get input from user
-# input01 = input("\nType IP: ").upper() 
-
-# #gets information
-# output = socket.gethostbyaddr(str(input01))
-
-# #processes the information to only get the hostname
-# outputProceesed = str(output).split("'")[1::2]
-
-# #prints hostname
-# print(f"Their Hostname is {outputProceesed[0]}\n")
-
 def scan():
 
     # Incrimenta o final do IP de 0 a 255
@@ -40,7 +24,7 @@ def scan():
                     output = socket.gethostbyaddr(str(ip_certo))
                     hostname = str(output).split("'")[1::2][0]
                 except:
-                    hostname = 'sem hostname'
+                    hostname = 'Sem hostname'
                 print(f'Testando: {ip_certo}:{porta} -> Aberta | {hostname}')
     print('Scan Finalizado!')
     
